@@ -1,0 +1,288 @@
+Section 1.1.3 Review | Questions 1, 3, 8, 12
+
+Question 1: How do assemblers and linkers work together?
+  The assembler converts assembly language into machine language. The linker combines and links the individual files into a single executable program. Meaning the assembler and linker are needed to work together to execute a program.
+
+Question 3: What is meant by a one-to-many relationship when comparing a high level language to machine language?
+  A single statement in a high level language expands into multiple assembly language or machine instructions.
+
+Question 8: Do you suppose type checking on pointer variables is stronger, stricter in assembly language, or in C and C++?
+  C++ doesn’t let a pointer of any single type become assigned to a pointer with a different dype. Assembly language has no type restrictions in regards to pointers.
+
+Question 12: Challenge: Translate the following C++ expression to assembly language, using the example presented earlier in this chapter as a guide: X = (Y * 4) + 3
+  mov	eax, Y		; move Y to the EAX register
+  mov	ebx, 4		; move 4 to the EBX register
+  imul	ebx		; multiply EAX by EBX
+  add	eax, 3		; add 3 to the EAX register
+  mov	X,eax		; move EAX to X
+
+
+Section 1.2.1 Review | Questions 2, 3, 10
+
+Question 2: Why do you suppose translated programs often execute more quickly than interpreted ones?
+  Interpreted programs must be reduced to machine instructions at runtime.
+
+Question 3: (True/False): When an interpreted program written in language L1 runs, each of its instructions is decoded and executed by a program written in language L0.
+  True
+
+Question  10: Statements at the assembly language level of a virtual machine are translated into statements at which other level?
+  Level 2, the Instruction Set Architecture (ISA)
+
+
+Section 1.3.9 Review | Questions 2, 3, 5, 6, 7
+
+Question 2: What is the decimal representation of each of the following unsigned binary integers: 
+  1111.1000
+    Convert 1111.1000 to 0000.0111 + 1 = 0000.1000 = 8
+  1100.1010
+    Convert 1100.1010 to 0011.0101 + 1 = 0011.0110 = 54
+  1111.0000
+    Convert 1111.0000 to 0000.1111 + 1 = 0001.0000 = 16
+
+Question 3: What is the sum of each pair of binary integers? 
+  0000.1111 + 0000.0010
+    = 0001.0001
+  1101.0101 + 0110.1011
+    = 0100.0000 or = 0001.0100.0000
+  0000.1111 + 0000.1111
+    = 0001.1110
+
+Question 5: What is the minimum number of binary bits needed to represent each of the following unsigned decimal integers?
+  65
+    Binary = 0100.0001 = 7 bits
+  409
+    Binary = 0001.1001.1001 = 9 bits
+  16385
+    Binary = 0100.0000.0000.0001 = 11 bits
+
+Question 6: What is the hexadecimal representation of each of the following binary numbers?
+  0011.0101.1101.1010
+    = 35DA
+  1100.1110.1010.0011
+    = CEA3
+  1111.1110.1101.1011
+    = FEDB
+
+Question 7: What is the binary representation of the following hexadecimal numbers?
+  A469.3FBC
+    = 1010.0100.0110.1001.0011.1111.1011.1100
+  B697.C7A1
+    = 1011.0110.1001.0111.1100.0111.1010.0001
+  2B3D.9461
+    = 0010.1011.0011.1101.1001.0100.0110.0001
+
+
+Section 1.7.1 Review | Questions 1-22, 25
+
+Question 1: In an 8-bit binary number, which is the most significant bit (MSB)?
+  The MSB would be the bit most left, or the 8th bit.
+
+Question 2: What is the decimal representation of each of the following unsigned binary integers? 
+  0011.0101
+    = 53
+  1001.0110
+    = 150
+  1100.1100
+    = 204
+
+Question 3: What is the sum of each pair of binary integers.
+  1010.1111 + 1101.1011
+    = 1000.1010 or = 0001.1000.1010
+  1001.0111 + 1111.1111
+    = 1001.0110 or = 0001.1001.0110
+  0111.0101 + 1010.1100
+    = 0010.0001 or = 0001.0010.0001
+
+Question 4: Calculate binary 0000.1101 minus 0000.0111
+  = 0000.0110
+
+Question 5: How many bits are used by each of the following data types?
+  Word
+    16 bits 
+  Doubleword
+    32 bits
+  Quadword
+    64 bits
+  Double Quadword
+    128 bits
+
+Question 6: What is the minimum number of binary bits needed to represent each of the following unsigned decimal integers?
+  4095
+    Binary = 1111.1111.1111 = 12 bits
+  65534
+    Binary = 1111.1111.1111.1110 = 16 bits
+  42319
+    Binary = 1010.0101.0100.1111 = 16 bits
+
+Question 7: What is the hexadecimal representation of each of the following binary numbers?
+  0011.0101.1101.1010
+    = 35DA
+  1100.1110.1010.0011
+    = CEA3
+  1111.1110.1101.1011
+    = FEDB
+
+Question 8: What is the binary representation of the following hexadecimal numbers?
+  0126.F9D4
+    = 0001.0010.0110.1111.1001.1101.0100
+  6ACD.FA95
+    = 0110.1010.1100.1101.1111.1010.1001.0101
+  F69B.DC2A
+    = 1111.0110.1001.1011.1101.1100.0010.1010
+
+Question 9: What is the unsigned decimal representation of each of the following hexadecimal integers?
+  3A
+    = 58
+  1BF
+    = 447
+  1001
+    = 4097
+
+Question 10: What is the unsigned decimal representation of each of the following hexadecimal integers?
+  62
+    = 98
+  4B3
+    = 1,203
+  29F
+    = 1,237
+
+Question 11: What is the 16-bit hexadecimal representation of each of the following signed decimal integers?
+  -24
+    = FFFF.FFFF.FFFF.FFE8
+  -331
+    = FFFF.FFFF.FFFF.FEB5
+
+Question 12: What is the 16-bit hexadecimal representation of each of the following signed decimal integers?
+  -21
+    = FFFF.FFFF.FFFF.FFEB
+  -45
+    = FFFF.FFFF.FFFF.FFD3
+
+Question 13: The following 16-bit hexadecimal numbers represent signed integers. Convert each to decimal.
+  6BF9
+    = FFFF.FFFF.FFFF.9407
+    Decimal = -27,641
+  C123
+    = FFFF.FFFF.FFFF.3EDD
+    Decimal = -49,443
+
+Question 14: The following 16-bit hexadecimal numbers represent signed integers. Convert each to decimal.
+  4CD2
+    = FFFF.FFFF.FFFF.B32E
+    Decimal = -19,666
+  8230
+    = FFFF.FFFF.FFFF.7DD0
+    Decimal = -33,328
+
+Question 15: What is the decimal representation of each of the following signed binary numbers?
+  1011.0101
+    = 0100.1010 + 1 = 0100.1011
+    Signed Decimal = - 57
+  0010.1010
+    = 1101.0101 + 1 = 1101.0110
+    Signed Decimal = -214
+  1111.0000
+    = 0000.1111 + 1 = 0001.0000
+    Signed Decimal = -16
+
+Question 16: What is the decimal representation of each of the following signed binary numbers? 
+  1000.0000
+    = 0111.1111 + 1 = 1000.0000
+    Signed Decimal = -128
+  1100.1100
+    = 0011.0011 + 1 = 0011.0100
+    Signed Decimal = -52
+  1011.0111
+    = 0100.1000 + 1 = 0100.1001
+    Signed Decimal = -73
+
+Question 17: What is the 8-bit binary (Two’s-Complement) representation of each of the following signed decimal integers?
+  -5
+    abs(-5) = 0000.0101
+    Reverse = 1111.1010 + 1 = 1111.1011
+  -42
+    abs(-42) = 0010.1010
+    Reverse = 1101.0101 + 1 = 1101.0110
+  -16
+    abs(-16) = 0001.0000
+    Reverse = 1110.1111 + 1 = 1111.0000
+
+Question 18: What is the 8-bit binary (Two’s Complement) representation of each of the following signed decimal integers?
+  -72
+    abs(-72) = 0100.1000
+    Reverse = 1011.0111 + 1 = 1011.1000
+  -98
+    abs(-98) = 0110.0010
+    Reverse = 1001.1101 + 1 = 1001.1110
+  -26
+    abs(-26) = 0001.1010
+    Reverse = 1110.0101 + 1 = 1110.0110
+
+Question 19: What is the sum of each pair of hexadecimal integers?
+  6B4 + 3FE
+    = AB2
+  A49 + 6BD
+    = 1106
+
+Question 20: What is the sum of each pair of hexadecimal integers?
+  7C4 + 3BE
+    = B82
+  B69 + 7AD
+    = 1316
+
+Question 21: What are the hexadecimal and decimal representations of the ACSII character capital B?
+  Hexadecimal = 42
+  Decimal = 66
+
+Question 22: What are the hexadecimal and decimal representations of the ACSII character capital G?
+  Hexadecimal = 47
+  Decimal = 71
+
+Question 25: Create a truth table to show all possible inputs and outputs for the boolean function described by: ~(A v B).
+
+| A | B | A v B | ~( A v B ) |
+------------------------------
+| T | T |   T   |      F     |
+| T | F |   T   |      F     |
+| F | T |   T   |      F     |
+| F | F |   F   |      T     |
+
+
+Section 1.7.2 Algorithm Workbench | Choose any 1 question
+
+Question 1: Write a function that receives a string containing a 16-bit binary integer. The function must return the string’s integer value. (Assuming return decimal value)
+
+#include <iostream>
+#include <string>
+#include <math.h>
+using namespace std;
+
+int bTD(string binary);
+
+int main() {
+	string bin = "";
+	cout << "Binary to Decimal Translator\nEnter a 16-bit Binary Integer: ";
+	cin >> bin;
+	cout << "The Decimal Representation of " << bin << " is equal to " << bTD(bin) << endl;
+
+	system("pause");
+	return 0;
+}
+
+int bTD(string binary) {
+	int dec = 0, counter = 0;
+	int size = binary.size();
+	if (size > 16) {
+		cout << "ERROR - Binary Integer is more than 16 bits." << endl;
+		exit(1);
+	} else {
+		for (int i = (size - 1); i >= 0; i--) {
+			if (binary[i] == '1') {
+				dec += pow(2, counter);
+			}
+			counter++;
+		}
+	}
+	return dec;
+}
+
